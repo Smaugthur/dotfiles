@@ -103,7 +103,7 @@ call plug#end()
     source ~/.config/nvim/vim-plug/startify.vim
 
 " indentLine
-    let g:indentLine_fileTypeExclude = ['text','vim','tree','help','startify']
+    let g:indentLine_fileTypeExclude = ['text','vim','nerdtree','help','startify']
     let g:indentLine_bufTypeExclude = ['help','terminal']
 
 " Toggle transparent background {{{

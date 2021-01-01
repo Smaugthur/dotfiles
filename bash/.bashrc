@@ -120,6 +120,9 @@ fi
 
 alias vi="nvim"
 alias fd=fdfind
+alias ll="ls -la"
+alias tlauncher="java -jar ~/Documents/Tlauncher/TLauncher-2.75.jar"
+alias tiling="~/Documents/tiling.sh"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source /usr/share/doc/fzf/examples/key-bindings.bash

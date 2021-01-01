@@ -1,6 +1,4 @@
-
-initializeANSI()
-{
+initializeANSI() {
   esc=""
 
   blackf="${esc}[30m";   redf="${esc}[31m";    greenf="${esc}[32m"
