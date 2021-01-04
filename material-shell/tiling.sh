@@ -9,7 +9,7 @@ if [ "$1" = "on" ]; then
 gnome-extensions enable material-shell@papyelgringo
 cat << EOF
 
-    TALING MODE ${greenf}ENABLED${reset}!
+    TILING MODE ${greenf}ENABLED${reset}!
 
 EOF
 killall gnome-shell
@@ -17,7 +17,7 @@ elif [ "$1" = "off" ]; then
 gnome-extensions disable material-shell@papyelgringo
 cat << EOF
 
-    TALING MODE ${redf}DISABLED${reset}!
+    TILING MODE ${redf}DISABLED${reset}!
 
 EOF
 killall gnome-shell
