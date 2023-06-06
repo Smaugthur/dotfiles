@@ -1,0 +1,25 @@
+# For clonning repos, you must edit your ssh URL to
+# especify which key will be used.
+#
+# Ray Account:
+# git@github.com:<account>/
+#
+# darayor:
+# git@github.com-personal:<account>/
+#                  ^^^
+#               ADD THIS SNIP
+
+# Autoadd keys when starting ssh-agent
+#AddKeysToAgent yes
+
+# College account. Default (ray22933)
+Host github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/college
+
+# Personal account (darayor)
+Host github.com-personal
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/personal
