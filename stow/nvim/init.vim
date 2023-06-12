@@ -1,4 +1,4 @@
-"""""""""""""
+""""""""""""
 "PLUGINS
 """""""""""""""
 " {{{
@@ -24,7 +24,8 @@ call plug#begin('~/.vim/plugged')
     " Status bar
     Plug 'vim-airline/vim-airline'
     " Intellisense
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'yarn install --frozen-lockfile'} " this is for auto complete, prettier and tslinting
+    let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier']  " list of CoC extensions needed
     " Autocompletition for C#
     Plug 'Omnisharp/omnisharp-vim'
     " Linter
@@ -35,6 +36,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     " Debugging functionality
     Plug 'puremourning/vimspector'
+    " Auto close ( [ {
+    Plug 'jiangmiao/auto-pairs'
+
+    " Javascript better Highlighting
+    Plug 'yuezk/vim-js'
 
 call plug#end()
 "}}}
@@ -92,11 +98,6 @@ call plug#end()
     let g:gruvbox_termcolors=16
     let $BAT_THEME='ansi-dark'
 
-    if strftime("%H") < 17
-      set background=light
-    else
-      set background=dark
-    endif
 """""""""""""""""
 " KEY MAPS
 """""""""""""""""
@@ -152,6 +153,7 @@ call plug#end()
         endif
     endfunction
 
+call Change_theme_by_hour()
 " Toggle transparent background {{{
     let t:is_transparent = 0
     function! Toggle_transparent()
