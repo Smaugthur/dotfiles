@@ -8,6 +8,8 @@ fi
 # aliases
 alias vi="nvim"
 alias exa="ls"
+alias nx="nix-shell"
+alias fz="searchfzf" # Function for cd with fzf
 
 # Enable vi mode
 bindkey -v
@@ -45,3 +47,6 @@ export FZF_DEFAULT_OPTS="
 --color=marker:#73d0ff,spinner:#73d0ff,header:#d4bfff
 --bind 'ctrl-u:toggle-preview'
 "
+function searchfzf() {
+    cd $(fd --hidden --follow --exclude '.git' --type d | fzf)
+}
