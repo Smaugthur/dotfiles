@@ -93,5 +93,8 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Brightness
     ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
     ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
+
+    # Firefox Shortcuts
+    ([mod], "y", lazy.spawn("firefox -new-window https://music.youtube.com")),
     
 ]]
