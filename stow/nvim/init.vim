@@ -61,8 +61,8 @@ call plug#end()
     set relativenumber
     set number
     set numberwidth=1
-    set cursorline
-    set cursorcolumn
+"    set cursorline
+"   set cursorcolumn
 
     "Spliting Buffers
     set splitright
@@ -170,3 +170,4 @@ call Change_theme_by_hour()
     map <Leader>t : call Toggle_transparent()<CR>
 
 " }}}
+
