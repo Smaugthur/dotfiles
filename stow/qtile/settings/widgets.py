@@ -63,6 +63,7 @@ def workspaces():
 
 
 primary_widgets = [
+
     *workspaces(),
 
     separator(),
@@ -110,24 +111,25 @@ primary_widgets = [
     widget.Systray(background=colors['dark'], padding=5),
 ]
 
-secondary_widgets = [
-    *workspaces(),
+def secondary_widgets() :
+    return [
+        *workspaces(),
 
-    separator(),
+        separator(),
 
-    powerline('color1', 'dark'),
+        powerline('color1', 'dark'),
 
-    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
+        widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
+        widget.CurrentLayout(**base(bg='color1'), padding=5),
 
-    powerline('color2', 'color1'),
+        powerline('color2', 'color1'),
 
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
+        widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
 
-    powerline('dark', 'color2'),
-    
-]
+        powerline('dark', 'color2'),
+        
+    ]
 
 widget_defaults = {
     'font': 'Mononoki Nerd Font Bold',
