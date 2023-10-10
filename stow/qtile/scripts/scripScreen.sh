@@ -8,7 +8,6 @@ set_monitors () {
     sleep 2s &&
     nitrogen --restore
     qtile cmd-obj -o cmd -f restart
-
 }
 # Set monitors on startup
     set_monitors
