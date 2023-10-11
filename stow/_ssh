@@ -1,7 +1,7 @@
 #/bin/zsh
 
-config_folder=~/.config/alacritty
-package=alacritty
+config_folder=~/.ssh/
+package=ssh
 
 # First be sure the path for config exist
 mkdir -p $config_folder
