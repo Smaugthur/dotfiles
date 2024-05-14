@@ -28,6 +28,10 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # Add Yarn packages to the $PATH.
 export PATH="$PATH:/opt/yarn-[version]/bin"
 export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:$ANDROID_HOME/tools/bin/"
+export PATH="$PATH:$ANDROID_HOME/platform-tools/"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/emulator"
 
 # Enable FZF mappings
 source /usr/share/fzf/key-bindings.zsh

@@ -23,3 +23,15 @@ Host github.com-personal
    HostName github.com
    User git
    IdentityFile ~/.ssh/personal
+
+# Personal account (darayor)
+Host web.uvg
+   HostName 3.13.174.55
+   User ubuntu
+   IdentityFile ~/.ssh/stw24Pem.pem
+
+# Personal account (darayor)
+Host web.personal
+   HostName 18.116.43.163
+   User ubuntu
+   IdentityFile ~/.ssh/mykey.pem
