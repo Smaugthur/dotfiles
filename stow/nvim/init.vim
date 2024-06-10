@@ -43,6 +43,8 @@ call plug#begin('~/.vim/plugged')
     " Javascript better Highlighting
     Plug 'yuezk/vim-js'
 
+    Plug 'ThePrimeagen/vim-be-good'
+
 call plug#end()
 "}}}
 
