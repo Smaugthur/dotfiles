@@ -10,7 +10,7 @@ cbatticon -u 5 &
 # systray volume
 volumeicon &
 # Red light display.
-redshift-gtk &
+# redshift-gtk &
 # Automounting disk.
 udiskie -t &
 # Network manager applet
@@ -18,6 +18,7 @@ nm-applet &
 # Nitrogen uploading current wallpaper
 nitrogen --restore &
 # Setting up right brightness
-brightnessctl set 15 &
-#bash $HOME/scripScreen.sh &
-/home/smaugthur/.config/qtile/scripts/setupScreen.sh &
+brightnessctl set 45 &
+
+zsh /home/smaugthur/.config/qtile/scripts/scripScreen.sh &
+#/home/smaugthur/.config/qtile/scripts/setupScreen.sh &

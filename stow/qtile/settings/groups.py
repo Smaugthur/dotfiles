@@ -5,7 +5,7 @@
 # Qtile workspaces
 
 from libqtile.config import Key, Group
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 from .keys import mod, keys
 
 
@@ -21,7 +21,7 @@ from .keys import mod, keys
 # nf-mdi-layers
 
 groups = [Group(i) for i in [
-    "   ", "   ", " 󰎈 ", "  "," 󰄛 ",
+    "   ", "  ", " 󰎈 ", "   "," 󰄛 ",
 ]]
 
 for i, group in enumerate(groups):

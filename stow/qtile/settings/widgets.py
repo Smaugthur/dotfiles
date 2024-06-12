@@ -1,5 +1,6 @@
-from libqtile import widget
+from qtile_extras import widget
 from .theme import colors
+from qtile_extras.widget.decorations import RectDecoration, PowerLineDecoration
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
 
@@ -19,7 +20,10 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
         **base(fg, bg),
         fontsize=fontsize,
         text=text,
-        padding=3
+        padding=0,
+        decorations=[
+            PowerLineDecoration(path="arrow_left")
+        ]
     )
 
 
@@ -27,8 +31,8 @@ def powerline(fg="light", bg="dark"):
     return widget.TextBox(
         **base(fg, bg),
         text="", # Icon: nf-oct-triangle_left
-        fontsize=37,
-        padding=-3
+        fontsize=56,
+        padding=-1
     )
 
 
@@ -38,15 +42,15 @@ def workspaces():
         widget.GroupBox(
             **base(fg='light'),
             font='Mononoki Nerd Font',
-            fontsize=19,
+            fontsize=16,
             margin_y=3,
-            margin_x=0,
-            padding_y=8,
-            padding_x=5,
-            borderwidth=1,
+            margin_x=10,
+            padding_y=2,
+            padding_x=3,
+            borderwidth=0,
             active=colors['active'],
             inactive=colors['inactive'],
-            rounded=False,
+            rounded=True,
             highlight_method='block',
             urgent_alert_method='block',
             urgent_border=colors['urgent'],
@@ -54,7 +58,16 @@ def workspaces():
             this_screen_border=colors['grey'],
             other_current_screen_border=colors['dark'],
             other_screen_border=colors['dark'],
-            disable_drag=True
+            disable_drag=True,
+            decorations = [
+                RectDecoration(
+                    colour = colors['grey'],
+                    radius=8,
+                    filled=True,
+                    padding_y=5
+                    )
+            ]
+            
         ),
         separator(),
         widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),

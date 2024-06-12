@@ -5,12 +5,12 @@
 # Qtile keybindings
 
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 
 mod = "mod4"
 
-keys = [Key(key[0], key[1], *key[2:]) for key in [
+keys = [ Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
 
     # Switch between windows in current stack pane
@@ -75,7 +75,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "p", lazy.spawn("pavucontrol")),
     
     # Change keyboard layout
-    ([mod , "shift"], "o", lazy.spawn("zsh /home/smaugthur/.config/qtile/scripts/chlan.sh")),
+    # ([mod , "shift"], "o", lazy.spawn("zsh /home/smaugthur/.config/qtile/scripts/chlan.sh")),
 
     # ------------ Hardware Configs ------------
 
@@ -95,6 +95,6 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 
     # Firefox Shortcuts
-    ([mod], "y", lazy.spawn("firefox -new-window https://music.youtube.com")),
+    # ([mod], "y", lazy.spawn("firefox -new-window https://music.youtube.com")),
     
 ]]
