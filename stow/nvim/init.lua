@@ -1,5 +1,4 @@
 
-
 -- ''''''''''''
 -- => BASICS
 -- ''''''''''''
@@ -82,9 +81,3 @@ map('x', 'J', ':move \'>+1<CR>gv-gv', {noremap=true})
 -- space + o previus tab
 map('n', '<Leader>p', ':tabn<CR>')
 map('n', '<Leader>o', ':tabp<CR>')
-
-local telescope = require('telescope.builtin')
-map('n', '<leader>ff', telescope.find_files)
-map('n', '<leader>fg', telescope.live_grep)
-map('n', '<leader>fb', telescope.buffers)
-map('n', '<leader>fh', telescope.help_tags)
