@@ -10,6 +10,7 @@ alias vi="nvim"
 alias exa="ls"
 alias nx="nix-shell"
 alias fz="searchfzf" # Function for cd with fzf
+alias npr="npm run" # Function for cd with fzf
 
 # Enable vi mode
 bindkey -v
@@ -25,8 +26,10 @@ eval "$(starship init zsh)"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket" 
 
+# ADD BINARIES FROM GO
+export PATH="$PATH:`go env GOPATH`/bin"
+
 # Add Yarn packages to the $PATH.
-export PATH="$PATH:/opt/yarn-[version]/bin"
 export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:$ANDROID_HOME/tools/bin/"
 export PATH="$PATH:$ANDROID_HOME/platform-tools/"

@@ -75,7 +75,7 @@ keys = [ Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "p", lazy.spawn("pavucontrol")),
     
     # Change keyboard layout
-    # ([mod , "shift"], "o", lazy.spawn("zsh /home/smaugthur/.config/qtile/scripts/chlan.sh")),
+    ([mod , "shift"], "o", lazy.spawn("zsh /home/smaugthur/.config/qtile/scripts/chlan.sh")),
 
     # ------------ Hardware Configs ------------
 
