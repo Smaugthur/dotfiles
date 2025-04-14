@@ -8,9 +8,11 @@ fi
 # aliases
 alias vi="nvim"
 alias exa="ls"
+alias lz="lazygit"
 alias nx="nix-shell"
 alias fz="searchfzf" # Function for cd with fzf
 alias npr="npm run" # Function for cd with fzf
+alias startDocker="sudo systemctl start docker.service" # Function for cd with fzf
 
 # Enable vi mode
 bindkey -v
@@ -35,6 +37,8 @@ export PATH="$PATH:$ANDROID_HOME/tools/bin/"
 export PATH="$PATH:$ANDROID_HOME/platform-tools/"
 export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
 export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:/home/smaugthur/OTHERS/MyDocs/INBOX/DataGrip-2024.2.2/bin/"
+export PATH="$PATH:/home/smaugthur/OTHERS/ghcup/bin"
 
 # Enable FZF mappings
 source /usr/share/fzf/key-bindings.zsh
@@ -57,3 +61,5 @@ export FZF_DEFAULT_OPTS="
 function searchfzf() {
     cd $(fd --hidden --follow --exclude '.git' --type d | fzf)
 }
+
+[ -f "/home/smaugthur/OTHERS/ghcup/.ghcup/env" ] && . "/home/smaugthur/OTHERS/ghcup/.ghcup/env" # ghcup-env

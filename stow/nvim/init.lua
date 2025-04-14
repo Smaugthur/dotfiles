@@ -37,9 +37,9 @@ vim.o.clipboard = "unnamedplus"
 -- syntax on
 
 -- Indent
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.smartindent = true
 vim.o.wrap = false
@@ -61,7 +61,7 @@ local function map(mode, lhs, rhs)
 end
 
 map('n', '<Leader>s', ':w<CR>')
-map('n', '<Leader>e', ':q<CR>')
+map('n', '<Leader>e', ':BufferClose<CR>')
 
 -- Move selected line / block of text in visual mode
 -- and change its indentation level
@@ -79,5 +79,8 @@ map('x', 'J', ':move \'>+1<CR>gv-gv', {noremap=true})
 -- move among buffers with CTRL
 -- space + p next tab
 -- space + o previus tab
-map('n', '<Leader>p', ':tabn<CR>')
-map('n', '<Leader>o', ':tabp<CR>')
+map('n', '<Leader>p', ':BufferNext<CR>')
+map('n', '<Leader>o', ':BufferPrevious<CR>')
+
+-- Colorscheme
+vim.cmd('colorscheme tokyonight-night')
